@@ -3,18 +3,32 @@ pt-BR:
     truly: 'Sim'
     falsely: 'Não'
 
-  index:
-    actions: Ações
-    not_found: Nenhum registro foi encontrado
-    model:
+  application:
+    name: ''
+    destroy_confirm_message: Tem certeza que deseja apagar?
+
+  bootstrap:
+    alert:
+      icons:
+        default: info-circle
+        info: info-circle
+        warning: exclamation-triangle
+        success: check
+        notice: check
+        danger: ban
+        error: ban
+      subtitles:
+        info: Informação
+        warning: Atenção
+        success: Sucesso
+        notice: Sucesso
+        danger: Erro
+        error: Erro
+      not_found: Nenhum registro foi encontrado
       male:
         not_found: Nenhum %{model} foi encontrado
       female:
         not_found: Nenhuma %{model} foi encontrada
-
-  application:
-    name: ''
-    destroy_confirm_message: Tem certeza que deseja apagar?
 
   menu:
     default:
@@ -80,6 +94,8 @@ pt-BR:
     dollar: attach_money
     envelope: email
     eye: visibility
+    exclamation-triangle: report_problem
+    info-circle: info
     hdd-o: save_alt
     paperclip: attachment
     files-o: file_copy
