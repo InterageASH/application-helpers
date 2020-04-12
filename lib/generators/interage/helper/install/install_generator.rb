@@ -5,7 +5,7 @@ module Interage
     class InstallGenerator < Rails::Generators::Base
       source_root File.expand_path('templates', __dir__)
 
-      desc 'Generates a application helper.'
+      desc 'Generates a application helpers.'
 
       def create_application_helper
         copy_file 'application_helper.rb', application_helper_path

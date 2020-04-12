@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'interage/helper/version'
+require 'interage/helpers/version'
 require 'active_support/core_ext/module'
 
 module Interage

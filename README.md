@@ -6,7 +6,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'interage-helper', '~> 0.1.4'
+gem 'interage-helpers', '~> 0.1.4'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ bundle install
 Or install it yourself as:
 
 ```bash
-gem install interage-helper
+gem install interage-helpers
 ```
 
 ## Usage
@@ -26,14 +26,14 @@ gem install interage-helper
 You can use a Rails generator to create `ApplicationHelper` and add locales file:
 
 ```bash
-rails g interage:helper:install
+rails g interage:helpers:install
 ```
 
 If you want to overwrite some variables:
 
 ```env
 ### APPLICATION HELPER
-## Interage::ApplicationHelper
+## Interage::ApplicationHelpers
 #
 APP_NAME='Nome da Aplicação'
 ENV_NAME='development'
@@ -47,7 +47,7 @@ DEFAULT_FONT_ICON='fa'
 
 ## Interage::CocoonHelper
 #
-DEFAULT_COCOON_BTN_CLASS='btn btn-sm btn-outline-'
+DEFAULT_BTN_TYPE_CLASS='btn btn-sm btn-outline-'
 
 ## Interage::ControllerActiveHelper
 #

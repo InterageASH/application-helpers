@@ -2,6 +2,8 @@
 
 module Interage
   module BootstrapHelper
+    DEFAULT_BTN_CLASS = 'btn btn-sm btn-outline-'
+
     def bootstrap_alert(type, message)
       icon = t("bootstrap.alert.icons.#{type}", default: type)
 
@@ -55,6 +57,12 @@ module Interage
 
     def text_not_found_female(model)
       text_not_found(:female, model)
+    end
+
+    def bootstrap_default_btn_class(type)
+      default_btn_class = ENV.fetch('DEFAULT_BTN_TYPE_CLASS', DEFAULT_BTN_CLASS)
+
+      "#{default_btn_class}#{type} text-truncate"
     end
   end
 end

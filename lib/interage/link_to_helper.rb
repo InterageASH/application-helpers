@@ -5,6 +5,7 @@ module Interage
     ASIDE_DEFAULT_CLASS = 'list-group-item'
     PREFIX_BUTTON_CLASS = 'btn btn-sm btn-outline-'
     DESTROY_CONFIRM_MESSAGE = 'Tem certeza que deseja apagar?'
+    NEW_BUTTON_CLASS = 'btn text-truncate btn-outline-application'
 
     def aside_link_to(text, url = '#', html_options = {})
       html_options[:class] = "#{ASIDE_DEFAULT_CLASS} #{html_options[:class]}"
@@ -20,7 +21,7 @@ module Interage
     def link_to_new(resource, url)
       text = t('menu.links.new', model: tm(resource).downcase)
 
-      link_to url, title: strip_tags(text), class: 'btn btn-outline-primary' do
+      link_to url, title: strip_tags(text), class: NEW_BUTTON_CLASS do
         app_icon_text(t('menu.icons.new'), text)
       end
     end

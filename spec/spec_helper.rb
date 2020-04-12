@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'interage/helper'
+require 'interage/helpers'
 
 class DummyClass
 end

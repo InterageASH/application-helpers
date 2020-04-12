@@ -2,7 +2,7 @@ Description:
     Explain the generator
 
 Example:
-    rails g interage:helper:install
+    rails g interage:helpers:install
 
     This will create:
-        /app/queries/application_helper.rb
+        /app/helpers/application_helper.rb

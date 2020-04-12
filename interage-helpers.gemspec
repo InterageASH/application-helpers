@@ -2,12 +2,12 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'interage/helper/version'
+require 'interage/helpers/version'
 
 Gem::Specification.new do |spec|
-  CODE_URL = 'https://gitlab.com/interage/patterns/helper'
+  CODE_URL = 'https://gitlab.com/interage/patterns/helpers'
 
-  spec.name          = 'interage-helper'
+  spec.name          = 'interage-helpers'
   spec.version       = Interage::Helper::VERSION
   spec.authors       = ['Walmir Neto']
   spec.email         = ['owalmirneto@gmail.com']
