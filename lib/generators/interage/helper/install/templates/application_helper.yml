@@ -3,6 +3,19 @@ pt-BR:
     truly: 'Sim'
     falsely: 'Não'
 
+  index:
+    actions: Ações
+    not_found: Nenhum registro foi encontrado
+    model:
+      male:
+        not_found: Nenhum %{model} foi encontrado
+      female:
+        not_found: Nenhuma %{model} foi encontrada
+
+  application:
+    name: ''
+    destroy_confirm_message: Tem certeza que deseja apagar?
+
   menu:
     default:
       index: Listar

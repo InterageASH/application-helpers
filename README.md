@@ -6,7 +6,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'interage-helper', '~> 0.1.1'
+gem 'interage-helper', '~> 0.1.2'
 ```
 
 And then execute:
