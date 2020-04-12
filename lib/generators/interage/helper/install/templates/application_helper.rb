@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class ApplicationHelper
+module ApplicationHelper
   include ::Interage::ApplicationHelper
 end
