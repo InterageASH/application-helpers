@@ -6,7 +6,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'interage-helper', '~> 0.1.3'
+gem 'interage-helper', '~> 0.1.4'
 ```
 
 And then execute:
@@ -65,130 +65,150 @@ FAVICON_FILE_NAME='icons/apple-touch-icon'
 #### Interage::LinkToHelper
 
 ```erb
-<p><%= link_to_edit edit_user_path(user) %></p>
-<p><%= link_to_back :back %></p>
-<p><%= link_to_show user_path(user) %></p>
-<p><%= link_to_destroy user_path(user) %></p>
-<p><%= link_to_new User, users_path %></p>
+<%= link_to_edit edit_user_path(user) %>
+<%= link_to_back :back %>
+<%= link_to_show user_path(user) %>
+<%= link_to_destroy user_path(user) %>
+<%= link_to_new User, users_path %>
 ```
 
 #### Interage::ApplicationIconHelper
 
 ```erb
-<p><%= app_icon('user', class: 'text-muted') %></p>
-<p><%= app_icon_text('users', 'Usuários', class: 'text-muted') %></p>
+<%= app_icon('user', class: 'text-muted') %>
+<%= app_icon_text('users', 'Usuários', class: 'text-muted') %>
 ```
 
 #### Interage::FontAwesomeHelper
 
 ```erb
-<p><%= fa_icon('user', class: 'text-muted') %></p>
-<p><%= fa_icon_text('users', 'Usuários', class: 'text-muted') %></p>
+<%= fa_icon('user', class: 'text-muted') %>
+<%= fa_icon_text('users', 'Usuários', class: 'text-muted') %>
 ```
 
 #### Interage::MaterialDesignIconsHelper
 
 ```erb
-<p><%= md_icon('user', class: 'text-muted') %></p>
-<p><%= md_icon_text('users', 'Usuários', class: 'text-muted') %></p>
+<%= md_icon('user', class: 'text-muted') %>
+<%= md_icon_text('users', 'Usuários', class: 'text-muted') %>
 ```
 
 #### Interage::VersionHelper
 
 ```erb
-<p><%= app_version %></p>
-<p><%= app_text_version %></p>
+<%= app_version %>
+<%= app_text_version %>
 ```
 
 #### Interage::TranslationHelper
 
 ```erb
-<p><%= tm(User) %></p>
-<p><%= tmp(User) %></p>
-<p><%= ta(User, :name) %></p>
-<p><%= tb(false) %></p>
-<p><%= tb(true) %></p>
-<p><%= tbi(false) %></p>
-<p><%= tbi(true) %></p>
-<p><%= tbci(false) %></p>
-<p><%= tbci(true) %></p>
+<%= tm(User) %>
+<%= tmp(User) %>
+<%= ta(User, :name) %>
+<%= tb(false) %>
+<%= tb(true) %>
+<%= tbi(false) %>
+<%= tbi(true) %>
+<%= tbci(false) %>
+<%= tbci(true) %>
 ```
 
 #### Interage::TextHelper
 
 ```erb
-<p><%= nl2br("Hello\nWorld") %></p>
+<%= nl2br("Hello\nWorld") %>
 ```
 
 #### Interage::PhoneHelper
 
 ```erb
-<p><%= format_phone('81999599805') %></p>
+<%= format_phone('+5581987654321') %>
+<%= format_phone('5581987654321') %>
+<%= format_phone('081987654321') %>
+<%= format_phone('81987654321') %>
+<%= format_phone('8187654321') %>
+<%= format_phone('987654321') %>
+<%= format_phone('98765432') %>
 ```
 
 #### Interage::PaginationHelper
 
 ```erb
-<p><%= pagination_links(@users) %></p>
+<%= pagination_links(@users) %>
 ```
 
 #### Interage::NumberHelper
 
 ```erb
-<p><%= default_currency_format(10_000) %></p>
+<%= default_currency_format(10.57) %>
+<%= default_currency_format(100.17) %>
+<%= default_currency_format(1_000) %>
+<%= default_currency_format(10_000) %>
+<%= default_currency_format(1_000_000) %>
 ```
 
 #### Interage::GravatarHelper
 
 ```erb
-<p><%= gravatar_image_tag('developer@interage.in') %></p>
+<%= gravatar_image_tag(user.email) %>
 ```
 
 #### Interage::ControllerActiveHelper
 
 ```erb
-<p><%= menu_active('home') %></p>
-<p><%= current_controller?('home') %></p>
+<%= current_controller?('home') %>
+<%= current_controller?('docs') %>
+<%= menu_class_show('docs') %>
+<%= menu_active('docs') %>
+<%= current_controller?('home', 'docs') %>
+<%= menu_class_show('home', 'docs') %>
+<%= menu_active('home', 'docs') %>
 ```
 
 #### Interage::CEPHelper
 
 ```erb
-<p><%= format_cep('54754195') %></p>
+<%= format_cep('54754-195') %>
+<%= format_cep('54754195') %>
 ```
 
-#### Interage::CPFCNPJHelper
+#### Interage::CNPJHelper
 
 ```erb
-<p><%= format_cnpj('00000000000100') %></p>
-<p><%= format_cpf('05488608400') %></p>
+<%= format_cnpj('08.475.876/0001-04') %>
+<%= format_cnpj('08475876000104') %>
+```
+
+#### Interage::CPFHelper
+
+```erb
+<%= format_cpf('320.871.430-05') %>
+<%= format_cpf('32087143005') %>
 ```
 
 #### Interage::ApplicationHelper
 
 ```erb
-<p><%= format_seconds(20) %></p>
-<p><%= app_page_title('adsdasdasd ') %></p>
-<p><%= admin_page_title %></p>
-<p><%= devise_page_title %></p>
-<p><%= page_title %></p>
-<p><%= app_name %></p>
-<p><%= env_name_upcase %></p>
+<%= format_seconds(20) %>
+<%= admin_page_title %>
+<%= devise_page_title %>
+<%= page_title %>
+<%= app_name %>
+<%= env_name_upcase %>
 ```
 
 #### Interage::BootstrapHelper
 
 ```erb
-<%= bootstrap_alert('users', '') %>
-<%= bootstrap_alert_default('users') %>
-<%= bootstrap_alert_info('users') %>
-<%= bootstrap_alert_warning('users') %>
-<%= bootstrap_alert_success('users') %>
-<%= bootstrap_alert_danger('users') %>
+<%= bootstrap_alert_info('Info message') %>
+<%= bootstrap_alert_warning('Warning message') %>
+<%= bootstrap_alert_success('Success message') %>
+<%= bootstrap_alert_danger('Danger message') %>
 <%= bootstrap_alert_not_found_male(User) %>
 <%= bootstrap_alert_not_found_female(User) %>
-<p><%= text_not_found_male(User) %></p>
-<p><%= text_not_found_female(User) %></p>
+<%= text_not_found_male(User) %>
+<%= text_not_found_female(User) %>
 ```
 
 ## Contributing

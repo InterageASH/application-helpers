@@ -5,9 +5,10 @@ module Interage
     include ::Interage::ApplicationIconHelper
     include ::Interage::BootstrapHelper
     include ::Interage::CEPHelper
+    include ::Interage::CNPJHelper
     include ::Interage::CocoonHelper
     include ::Interage::ControllerActiveHelper
-    include ::Interage::CPFCNPJHelper
+    include ::Interage::CPFHelper
     include ::Interage::DateTimeHelper
     include ::Interage::FaviconHelper
     include ::Interage::FlashMessageHelper
@@ -27,7 +28,7 @@ module Interage
     end
 
     def app_page_title(area = '')
-      "#{env_name_upcase}#{page_title}#{area}#{app_name}"
+      strip_tags "#{env_name_upcase}#{page_title}#{area}#{app_name}"
     end
 
     def admin_page_title

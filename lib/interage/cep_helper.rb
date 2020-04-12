@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
+require_relative 'parsers/parser_cep'
+
 module Interage
   module CEPHelper
     def format_cep(cep)
-      return if cep.blank?
-
-      "#{cep[0, 5]}-#{cep[5, 3]}".strip
+      Interage::ParserCep.call(cep)
     end
   end
 end
