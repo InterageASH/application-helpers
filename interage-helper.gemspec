@@ -4,19 +4,21 @@ lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'interage/helper/version'
 
-CODE_URL = 'https://gitlab.com/interage/patterns/helper'
 Gem::Specification.new do |spec|
+  CODE_URL = 'https://gitlab.com/interage/patterns/helper'
+
   spec.name          = 'interage-helper'
   spec.version       = Interage::Helper::VERSION
   spec.authors       = ['Walmir Neto']
   spec.email         = ['owalmirneto@gmail.com']
 
-  spec.summary       = CODE_URL
-  spec.description   = CODE_URL
+  spec.summary       = 'Application Helper for Interage'
+  spec.description   = 'Classes to encapsulate helpers'
   spec.homepage      = CODE_URL
+  spec.licenses      = ['MIT']
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = CODE_URL
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
     spec.metadata['homepage_uri'] = spec.homepage
     spec.metadata['source_code_uri'] = CODE_URL

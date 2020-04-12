@@ -3,8 +3,8 @@
 module Interage
   module LinkToHelper
     ASIDE_DEFAULT_CLASS = 'list-group-item'
-    DESTROY_CONFIRM_MESSAGE = 'Tem certeza que deseja apagar?'
     PREFIX_BUTTON_CLASS = 'btn btn-sm btn-outline-'
+    DESTROY_CONFIRM_MESSAGE = 'Tem certeza que deseja apagar?'
 
     def aside_link_to(text, url = '#', html_options = {})
       html_options[:class] = "#{ASIDE_DEFAULT_CLASS} #{html_options[:class]}"
@@ -39,7 +39,7 @@ module Interage
 
     def link_to_destroy(url, html_options = {})
       html_options.merge!(method: :delete,
-                          'data-confirm' => DESTROY_CONFIRM_MESSAGE,
+                          'data-confirm' => destroy_confirm_message,
                           class: button_class('danger', html_options[:class]))
 
       link_to_default(:destroy, url, html_options)
@@ -55,6 +55,10 @@ module Interage
 
     def button_class(type, addicional_class = nil)
       "#{PREFIX_BUTTON_CLASS}#{type} #{addicional_class}"
+    end
+
+    def destroy_confirm_message
+      t('application.destroy_confirm_message', default: DESTROY_CONFIRM_MESSAGE)
     end
   end
 end

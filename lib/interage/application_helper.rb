@@ -31,11 +31,11 @@ module Interage
     end
 
     def admin_page_title
-      app_page_title('Administração :: ')
+      app_page_title(ENV['PREFIX_ADMIN_PAGE_TITLE'])
     end
 
     def devise_page_title
-      app_page_title('Autenticação :: ')
+      app_page_title(ENV['PREFIX_DEVISE_PAGE_TITLE'])
     end
 
     def page_title
@@ -43,13 +43,21 @@ module Interage
     end
 
     def app_name
-      ENV.fetch('APP_NAME', Rails.application.class.module_parent_name)
+      ENV.fetch('APP_NAME', t('application.name', default: rails_app_name))
+    end
+
+    def rails_app_name
+      rails_class = Rails.application.class
+
+      rails_class.try(:module_parent_name) || rails_class.parent_name
     end
 
     def env_name_upcase
-      return if ENV['ENV_NAME'].blank?
+      "[#{env_name.upcase}] " if env_name.present?
+    end
 
-      "[#{ENV['ENV_NAME'].upcase}] "
+    def env_name
+      ENV['ENV_NAME']
     end
   end
 end

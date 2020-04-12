@@ -39,7 +39,10 @@ module Interage
     end
 
     def text_not_found(gender, model)
-      t("index.model.#{gender}.not_found", model: tm(model).downcase)
+      default_not_found = t('index.model.not_found', default: '')
+
+      t("index.model.#{gender}.not_found", model: tm(model).downcase,
+                                           default: default_not_found)
     end
 
     def text_not_found_male(model)

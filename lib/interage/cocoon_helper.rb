@@ -25,7 +25,10 @@ module Interage
     end
 
     def cocoon_default_btn_class(type)
-      "#{DEFAULT_BTN_CLASS}#{type} text-truncate"
+      default_btn_class =
+        ENV.fetch('DEFAULT_COCOON_BTN_CLASS', DEFAULT_BTN_CLASS)
+
+      "#{default_btn_class}#{type} text-truncate"
     end
   end
 end

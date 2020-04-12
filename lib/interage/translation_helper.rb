@@ -18,7 +18,7 @@ module Interage
     #
     # Returns translated model.
     def translate_model_name(model, count = 1)
-      model.model_name.human(count: count)
+      count.to_i > 1 ? model.model_name.human : model.model_name.human.pluralize
     end
     alias tm translate_model_name
 

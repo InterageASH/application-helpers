@@ -2,8 +2,8 @@
 
 module Interage
   module FaviconHelper
-    EXTENTION = 'png'
-    FILE_NAME = 'icons/apple-touch-icon'
+    EXTENTION = ENV.fetch('FAVICON_EXTENTION', 'png')
+    FILE_NAME = ENV.fetch('FAVICON_FILE_NAME', 'icons/apple-touch-icon')
     FAVICON_SIZES = [nil, 57, 72, 76, 114, 120, 144, 152, 180].freeze
 
     def favicon_link_tags
