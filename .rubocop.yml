@@ -14,6 +14,11 @@ Style/SymbolArray:
 Style/WordArray:
   Enabled: false
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - interage-helpers.gemspec
+
 AllCops:
   TargetRubyVersion: 2.6
   Exclude:

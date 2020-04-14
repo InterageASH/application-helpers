@@ -11,7 +11,9 @@ module Interage
 
   autoload :ApplicationHelper, 'interage/application_helper'
   autoload :ApplicationIconHelper, 'interage/application_icon_helper'
-  autoload :BootstrapHelper, 'interage/bootstrap_helper'
+  autoload :BootstrapAlertHelper, 'interage/bootstrap_alert_helper'
+  autoload :BootstrapBadgeHelper, 'interage/bootstrap_badge_helper'
+  autoload :BootstrapButtonHelper, 'interage/bootstrap_button_helper'
   autoload :CEPHelper, 'interage/cep_helper'
   autoload :CNPJHelper, 'interage/cnpj_helper'
   autoload :CocoonHelper, 'interage/cocoon_helper'

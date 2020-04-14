@@ -201,12 +201,12 @@ FAVICON_FILE_NAME='icons/apple-touch-icon'
 #### Interage::BootstrapHelper
 
 ```erb
-<%= bootstrap_alert_info('Info message') %>
-<%= bootstrap_alert_warning('Warning message') %>
-<%= bootstrap_alert_success('Success message') %>
-<%= bootstrap_alert_danger('Danger message') %>
-<%= bootstrap_alert_not_found_male(User) %>
-<%= bootstrap_alert_not_found_female(User) %>
+<%= bs_alert_info('Info message') %>
+<%= bs_alert_warning('Warning message') %>
+<%= bs_alert_success('Success message') %>
+<%= bs_alert_danger('Danger message') %>
+<%= bs_alert_not_found_male(User) %>
+<%= bs_alert_not_found_female(User) %>
 <%= text_not_found_male(User) %>
 <%= text_not_found_female(User) %>
 ```

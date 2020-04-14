@@ -15,13 +15,37 @@ module Interage
     end
 
     def format_date(date, date_format = :date_time)
+      return if date.blank?
+
       l(date, format: date_format)
     end
 
     def format_time(time)
-      return if time.blank?
+      time.strftime('%H:%M') if time.present?
+    end
 
-      time.strftime('%H:%M')
+    def format_datetime(date, date_format = '%d/%m/%Y %H:%M')
+      format_date(date, format: date_format)
+    end
+
+    def current_day_name
+      l(Date.current, format: '%A')
+    end
+
+    def current_day
+      Date.current.day
+    end
+
+    def current_month_year
+      "#{current_month} / #{current_year}"
+    end
+
+    def current_month
+      Date.current.strftime('%b')
+    end
+
+    def current_year
+      Date.current.year
     end
   end
 end
