@@ -3,7 +3,9 @@
 module Interage
   module ApplicationHelper
     include ::Interage::ApplicationIconHelper
-    include ::Interage::BootstrapHelper
+    include ::Interage::BootstrapAlertHelper
+    include ::Interage::BootstrapBadgeHelper
+    include ::Interage::BootstrapButtonHelper
     include ::Interage::CEPHelper
     include ::Interage::CNPJHelper
     include ::Interage::CocoonHelper

@@ -7,11 +7,13 @@ module Interage
     DESTROY_CONFIRM_MESSAGE = 'Tem certeza que deseja apagar?'
     NEW_BUTTON_CLASS = 'btn text-truncate btn-outline-application'
 
-    def aside_link_to(text, url = '#', html_options = {})
-      html_options[:class] = "#{ASIDE_DEFAULT_CLASS} #{html_options[:class]}"
-      html_options[:title] = strip_tags(text)
+    def aside_link_to(*args, &block)
+      options = args.last.is_a?(Hash) ? args.pop : {}
+      options[:class] = "#{ASIDE_DEFAULT_CLASS} #{options[:class]}"
+      options[:title] = strip_tags(args.first) if block.blank?
+      args.push(options)
 
-      link_to text, url, html_options
+      link_to(*args, &block)
     end
 
     def link_to_modal(text, url = '#', html_options = {})
