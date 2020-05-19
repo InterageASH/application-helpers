@@ -2,6 +2,8 @@
 
 module Interage
   module MaterialDesignIconsHelper
+    MD_ICON_TEXT_CLASS = 'text'
+
     def md_icon(icon, options = {})
       icon_classes = icon.to_s.split(' ')
       icon = icon_classes.shift
@@ -14,7 +16,7 @@ module Interage
     def md_icon_text(icon, text, options = {})
       content_tag :span do
         concat md_icon(icon, options)
-        concat " #{text}"
+        concat content_tag(:span, " #{text}", class: MD_ICON_TEXT_CLASS)
       end
     end
 

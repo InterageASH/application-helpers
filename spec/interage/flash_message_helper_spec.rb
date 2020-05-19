@@ -8,6 +8,6 @@ module Interage
 
     it { expect(dummy_class).to respond_to(:flash_messages) }
     it { expect(dummy_class).to respond_to(:flashes) }
-    it { expect(dummy_class).to respond_to(:handle_type) }
+    it { expect(dummy_class).to respond_to(:handler_type) }
   end
 end
