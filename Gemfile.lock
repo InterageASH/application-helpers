@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    interage-helpers (0.0.2)
+    interage-helpers (0.1.0)
 
 GEM
   remote: https://rubygems.org/
