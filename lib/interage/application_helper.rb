@@ -6,6 +6,7 @@ module Interage
     include ::Interage::BootstrapAlertHelper
     include ::Interage::BootstrapBadgeHelper
     include ::Interage::BootstrapButtonHelper
+    include ::Interage::BootstrapGridHelper
     include ::Interage::CEPHelper
     include ::Interage::CNPJHelper
     include ::Interage::CocoonHelper
@@ -46,7 +47,7 @@ module Interage
     end
 
     def app_name
-      ENV.fetch('APP_NAME', t('application.name', default: rails_app_name))
+      raw ENV.fetch('APP_NAME', t('application.name', default: rails_app_name))
     end
 
     def rails_app_name

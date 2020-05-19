@@ -4,9 +4,12 @@ module Interage
   module BootstrapAlertHelper
     def bootstrap_alert(type, message)
       icon = t("bootstrap.alert.icons.#{type}", default: type)
+      subtitles = t("bootstrap.alert.subtitles.#{type}", default: '')
 
       content_tag :div, class: "no-margin alert alert-#{type}" do
-        app_icon_text(icon, message)
+        concat app_icon(icon)
+        concat content_tag(:b, " #{subtitles}: ") if subtitles.present?
+        concat message
       end
     end
     alias bs_alert bootstrap_alert

@@ -25,7 +25,15 @@ module Interage
     end
 
     def format_datetime(date, date_format = '%d/%m/%Y %H:%M')
-      format_date(date, format: date_format)
+      format_date(date, date_format)
+    end
+
+    def current_month_name
+      month_name(Date.current)
+    end
+
+    def month_name(date)
+      date.to_date.strftime('%b')
     end
 
     def current_day_name

@@ -5,7 +5,7 @@ module Interage
     def app_version
       return if app_text_version.blank?
 
-      content_tag :div, app_text_version, id: 'app-version'
+      raw content_tag(:div, app_text_version, id: 'app-version')
     end
 
     def app_text_version
