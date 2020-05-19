@@ -4,7 +4,7 @@ require 'interage/helpers/version'
 require 'active_support/core_ext/module'
 
 module Interage
-  module Helper
+  module Helpers
     class Error < StandardError
     end
   end
@@ -14,6 +14,7 @@ module Interage
   autoload :BootstrapAlertHelper, 'interage/bootstrap_alert_helper'
   autoload :BootstrapBadgeHelper, 'interage/bootstrap_badge_helper'
   autoload :BootstrapButtonHelper, 'interage/bootstrap_button_helper'
+  autoload :BootstrapGridHelper, 'interage/bootstrap_grid_helper'
   autoload :CEPHelper, 'interage/cep_helper'
   autoload :CNPJHelper, 'interage/cnpj_helper'
   autoload :CocoonHelper, 'interage/cocoon_helper'

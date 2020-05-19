@@ -1,3 +1,10 @@
+Version 0.1.0:
+ - Adiciona alguns helper metodos
+ - Ajusta nome da class principal da gem
+ - Inicia versão 0.1.0
+ - Atualiza url do repositório
+ - Update rake requirement from ~> 10.0 to ~> 13.0
+
 Version 0.0.2:
  - Altera arquivos VERSION e CHANGES da v0.0.2
  - Gera versão 0.0.2

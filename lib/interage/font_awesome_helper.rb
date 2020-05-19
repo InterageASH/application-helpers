@@ -2,6 +2,8 @@
 
 module Interage
   module FontAwesomeHelper
+    FA_ICON_TEXT_CLASS = 'text'
+
     def fa_icons
       t('icons_alias', default: {}).keys
     end
@@ -17,7 +19,7 @@ module Interage
     def fa_icon_text(icon, text, options = {})
       content_tag :span do
         concat fa_fw_icon(icon, options)
-        concat text
+        concat content_tag(:span, text, class: FA_ICON_TEXT_CLASS)
       end
     end
 
