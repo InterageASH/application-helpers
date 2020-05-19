@@ -6,11 +6,11 @@ require 'interage/helpers/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'interage-helpers'
-  spec.version       = Interage::Helper::VERSION
+  spec.version       = Interage::Helpers::VERSION
   spec.authors       = ['Walmir Neto']
   spec.email         = ['owalmirneto@gmail.com']
 
-  spec.summary       = 'Application Helper for Interage'
+  spec.summary       = 'Application Helpers for Interage'
   spec.description   = 'Classes to encapsulate helpers'
   spec.homepage      = 'https://github.com/InterageASH/application-helpers'
   spec.licenses      = ['MIT']

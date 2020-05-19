@@ -4,7 +4,7 @@ require 'interage/helpers/version'
 require 'active_support/core_ext/module'
 
 module Interage
-  module Helper
+  module Helpers
     class Error < StandardError
     end
   end
