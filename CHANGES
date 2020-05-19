@@ -1,4 +1,9 @@
-Version 0.1.0:
+Version 0.0.2:
+ - Altera arquivos VERSION e CHANGES da v0.0.2
+ - Gera versão 0.0.2
+ - Adicona novos helpers
+
+ Version 0.0.1:
  - Cria arquivos VERSION e CHANGES da v0.0.1
  - Gera versão 0.0.1
 
