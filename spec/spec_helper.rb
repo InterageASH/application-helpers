@@ -4,6 +4,8 @@ require 'bundler/setup'
 require 'interage/helpers'
 
 class DummyClass
+  def initialize
+  end
 end
 
 RSpec.configure do |config|

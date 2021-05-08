@@ -27,7 +27,7 @@ module Interage
     end
 
     def sufix_cnpj
-      [digits[-6..-3], digits[-2..-1]].join('-')
+      [digits[-6..-3], digits[-2..]].join('-')
     end
 
     def digits

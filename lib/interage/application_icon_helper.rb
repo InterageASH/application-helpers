@@ -14,7 +14,7 @@ module Interage
     end
 
     def app_icon_classes(icon, prefix, separator, options = {})
-      icon_classes = icon.to_s.split(' ').uniq.join(" #{separator}-")
+      icon_classes = icon.to_s.split.uniq.join(" #{separator}-")
 
       "#{prefix} #{separator}-#{icon_classes} #{options[:class]}".strip
     end
