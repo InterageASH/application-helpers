@@ -1,8 +1,9 @@
 require:
   - rubocop-rspec
   - rubocop-performance
+  - rubocop-rake
 
-Documentation:
+Style/Documentation:
   Enabled: false
 
 Style/EmptyMethod:
@@ -20,7 +21,8 @@ Metrics/BlockLength:
     - interage-helpers.gemspec
 
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 2.7
+  NewCops: enable
   Exclude:
     - bin/**/*
     - vendor/**/*

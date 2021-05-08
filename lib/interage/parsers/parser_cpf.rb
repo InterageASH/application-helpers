@@ -27,7 +27,7 @@ module Interage
     end
 
     def sufix_cpf
-      digits[-2..-1]
+      digits[-2..]
     end
 
     def digits

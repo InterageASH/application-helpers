@@ -5,7 +5,7 @@ module Interage
     MD_ICON_TEXT_CLASS = 'text'
 
     def md_icon(icon, options = {})
-      icon_classes = icon.to_s.split(' ')
+      icon_classes = icon.to_s.split
       icon = icon_classes.shift
 
       content_tag :i, class: md_classes(icon, options) do

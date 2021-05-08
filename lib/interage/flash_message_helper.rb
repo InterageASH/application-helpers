@@ -6,7 +6,7 @@ module Interage
 
     def flash_messages
       messages ||= flashes.map do |type, message|
-        bootstrap_alert(handler_type(type), handler_message(message))
+        bootstrap_alert(handle_type(type), handler_message(message))
       end
 
       safe_join(messages || [])
@@ -16,7 +16,7 @@ module Interage
       flash.to_h.symbolize_keys
     end
 
-    def handler_type(type)
+    def handle_type(type)
       ALIAS_TYPES[type] || type
     end
 
