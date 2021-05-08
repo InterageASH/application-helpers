@@ -15,7 +15,7 @@ module Interage
     end
 
     def perform
-      "#{digits[-8..-4]}-#{digits[-3..-1]}" if cep.positive?
+      "#{digits[-8..-4]}-#{digits[-3..]}" if cep.positive?
     end
 
     private

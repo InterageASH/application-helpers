@@ -39,7 +39,7 @@ module Interage
     end
 
     def sufix_phone
-      phone[-4..-1]
+      phone[-4..]
     end
 
     def valid?

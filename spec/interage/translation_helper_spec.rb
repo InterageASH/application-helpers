@@ -11,9 +11,11 @@ module Interage
     it { expect(dummy_class).to respond_to(:translate_model_attribute) }
     it { expect(dummy_class).to respond_to(:translate_boolean) }
     it { expect(dummy_class).to respond_to(:translate_boolean_in_icon) }
+
     it do
       expect(dummy_class).to respond_to(:translate_boolean_in_check_box_icon)
     end
+
     it { expect(dummy_class).to respond_to(:tm) }
     it { expect(dummy_class).to respond_to(:tmp) }
     it { expect(dummy_class).to respond_to(:ta) }

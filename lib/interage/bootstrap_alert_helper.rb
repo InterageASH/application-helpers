@@ -3,12 +3,12 @@
 module Interage
   module BootstrapAlertHelper
     def bootstrap_alert(type, message)
-      icon = t("bootstrap.alert.icons.#{type}", default: type)
+      icon = t("bootstrap.alert.icons.#{type}", default: type.to_s)
       subtitles = t("bootstrap.alert.subtitles.#{type}", default: '')
 
-      content_tag :div, class: "no-margin alert alert-#{type}" do
+      tag.div class: "alert alert-#{type} m-0" do
         concat app_icon(icon)
-        concat content_tag(:b, " #{subtitles}: ") if subtitles.present?
+        concat tag.b(" #{subtitles}: ") if subtitles.present?
         concat message
       end
     end
@@ -40,40 +40,40 @@ module Interage
     alias bs_alert_danger bootstrap_alert_danger
 
     def bootstrap_alert_not_found(gender, model)
-      bs_alert_info(text_404(gender, model))
+      bs_alert_info(text404(gender, model))
     end
-    alias bs_text_404 bootstrap_alert_not_found
+    alias bs_text404 bootstrap_alert_not_found
 
     def bootstrap_alert_not_found_male(model)
-      bs_text_404(:male, model)
+      bs_text404(:male, model)
     end
-    alias bs_male_404 bootstrap_alert_not_found_male
+    alias bs_male404 bootstrap_alert_not_found_male
 
     def bootstrap_alert_not_found_female(model)
-      bs_text_404(:female, model)
+      bs_text404(:female, model)
     end
-    alias bs_female_404 bootstrap_alert_not_found_female
+    alias bs_female404 bootstrap_alert_not_found_female
 
     def text_not_found(gender, model)
-      attributes = { model: tm(model).downcase, default: default_404 }
+      attributes = { model: tm(model).downcase, default: default404 }
 
-      t("bootstrap.alert.#{gender}.not_found", attributes)
+      t("bootstrap.alert.#{gender}.not_found", **attributes)
     end
-    alias text_404 text_not_found
+    alias text404 text_not_found
 
     def default_not_found
       t('bootstrap.alert.not_found', default: '')
     end
-    alias default_404 default_not_found
+    alias default404 default_not_found
 
     def text_not_found_male(model)
-      text_404(:male, model)
+      text404(:male, model)
     end
-    alias male_404 text_not_found_male
+    alias male404 text_not_found_male
 
     def text_not_found_female(model)
-      text_404(:female, model)
+      text404(:female, model)
     end
-    alias female_404 text_not_found_female
+    alias female404 text_not_found_female
   end
 end

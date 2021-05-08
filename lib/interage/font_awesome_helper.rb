@@ -9,7 +9,9 @@ module Interage
     end
 
     def fa_icon(icon, options = {})
-      content_tag :i, nil, options.merge(class: fa_classes(icon, options))
+      icon_html_options = options.merge(class: fa_classes(icon, options))
+
+      content_tag(:i, nil, icon_html_options)
     end
 
     def fa_fw_icon(icon, options = {})
@@ -24,7 +26,7 @@ module Interage
     end
 
     def fa_classes(icon, options = {})
-      icon_classes = icon.to_s.split(' ').uniq.join(' fa-')
+      icon_classes = icon.to_s.split.uniq.join(' fa-')
 
       "fa fa-#{icon_classes} #{options[:class]}".strip
     end
